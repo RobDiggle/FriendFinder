@@ -1,0 +1,20 @@
+{
+  "name": "friendfinderapp",
+  "version": "1.0.0",
+  "description": "Application for finding friends.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobDiggle/FriendFinder.git"
+  },
+  "author": "Robert Diggle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RobDiggle/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/RobDiggle/FriendFinder#readme"
+}
