@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>title</title>
+    <title>Friend finder application</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <link rel="stylesheet" href="stylesheet.css" type="text/css">
   <script src="../data/friends.js"></script>
 
-<!--   <script src="../../server.js"></script>  -->
 
   </head>
   <body>
@@ -22,11 +22,11 @@ On a scale of 1 to 5 answer the following questions. 1 is totally true, 5 is tot
 1. You are quiet.
 </p>
 
-  <input type="radio" name="answer" value="1"> 1<br>
-  <input type="radio" name="answer" value="2"> 2<br>
-  <input type="radio" name="answer" value="3"> 3<br>
-  <input type="radio" name="answer" value="4"> 4<br>
-  <input type="radio" name="answer" value="5"> 5<br>
+  <input type="radio" id="question1" value="1"> 1<br>
+  <input type="radio" id="question1" value="2"> 2<br>
+  <input type="radio" id="question1" value="3"> 3<br>
+  <input type="radio" id="question1" value="4"> 4<br>
+  <input type="radio" id="question1" value="5"> 5<br>
 
 
 
@@ -34,95 +34,94 @@ On a scale of 1 to 5 answer the following questions. 1 is totally true, 5 is tot
 2. You like to watch movies and talk at the same time.
 </p>
 
-  <input type="radio" name="answer" value="1"> 1<br>
-  <input type="radio" name="answer" value="2"> 2<br>
-  <input type="radio" name="answer" value="3"> 3<br>
-  <input type="radio" name="answer" value="4"> 4<br>
-  <input type="radio" name="answer" value="5"> 5<br>
+  <input type="radio" id="question2" value="1"> 1<br>
+  <input type="radio" id="question2" value="2"> 2<br>
+  <input type="radio" id="question2" value="3"> 3<br>
+  <input type="radio" id="question2" value="4"> 4<br>
+  <input type="radio" id="question2" value="5"> 5<br>
 
  <p>
 3. You like to watch sports.
 </p>
 
-  <input type="radio" name="answer" value="1"> 1<br>
-  <input type="radio" name="answer" value="2"> 2<br>
-  <input type="radio" name="answer" value="3"> 3<br>
-  <input type="radio" name="answer" value="4"> 4<br>
-  <input type="radio" name="answer" value="5"> 5<br>
+  <input type="radio" id="question3" value="1"> 1<br>
+  <input type="radio" id="question3" value="2"> 2<br>
+  <input type="radio" id="question3" value="3"> 3<br>
+  <input type="radio" id="question3" value="4"> 4<br>
+  <input type="radio" id="question3" value="5"> 5<br>
 
 <p>
 4. You like to play video games.
 </p>
 
-  <input type="radio" name="answer" value="1"> 1<br>
-  <input type="radio" name="answer" value="2"> 2<br>
-  <input type="radio" name="answer" value="3"> 3<br>
-  <input type="radio" name="answer" value="4"> 4<br>
-  <input type="radio" name="answer" value="5"> 5<br>
+  <input type="radio" id="question4" value="1"> 1<br>
+  <input type="radio" id="question4" value="2"> 2<br>
+  <input type="radio" id="question4" value="3"> 3<br>
+  <input type="radio" id="question4" value="4"> 4<br>
+  <input type="radio" id="question4" value="5"> 5<br>
 
 <p>
 5. You are extremely social.
 </p>
 
-  <input type="radio" name="answer" value="1"> 1<br>
-  <input type="radio" name="answer" value="2"> 2<br>
-  <input type="radio" name="answer" value="3"> 3<br>
-  <input type="radio" name="answer" value="4"> 4<br>
-  <input type="radio" name="answer" value="5"> 5<br>
+  <input type="radio" class="question5" value="1"> 1<br>
+  <input type="radio" class="question5" value="2"> 2<br>
+  <input type="radio" class="question5" value="3"> 3<br>
+  <input type="radio" class="question5" value="4"> 4<br>
+  <input type="radio" class="question5" value="5"> 5<br>
 
 <p>
 6. You like horror movies.
 </p>
 
-  <input type="radio" name="answer" value="1"> 1<br>
-  <input type="radio" name="answer" value="2"> 2<br>
-  <input type="radio" name="answer" value="3"> 3<br>
-  <input type="radio" name="answer" value="4"> 4<br>
-  <input type="radio" name="answer" value="5"> 5<br>
+  <input type="radio" class="question6" value="1"> 1<br>
+  <input type="radio" class="question6" value="2"> 2<br>
+  <input type="radio" class="question6" value="3"> 3<br>
+  <input type="radio" class="question6" value="4"> 4<br>
+  <input type="radio" class="question6" value="5"> 5<br>
 
 <p>
 7. You like theme parks.
 </p>
 
-  <input type="radio" name="answer" value="1"> 1<br>
-  <input type="radio" name="answer" value="2"> 2<br>
-  <input type="radio" name="answer" value="3"> 3<br>
-  <input type="radio" name="answer" value="4"> 4<br>
-  <input type="radio" name="answer" value="5"> 5<br>
-
+  <input type="radio" class="question7" value="1"> 1<br>
+  <input type="radio" class="question7" value="2"> 2<br>
+  <input type="radio" class="question7" value="3"> 3<br>
+  <input type="radio" class="question7" value="4"> 4<br>
+  <input type="radio" class="question7" value="5"> 5<br>
 <p>
 8. You enjoy going to museums.
 </p>
 
-  <input type="radio" name="answer" value="1"> 1<br>
-  <input type="radio" name="answer" value="2"> 2<br>
-  <input type="radio" name="answer" value="3"> 3<br>
-  <input type="radio" name="answer" value="4"> 4<br>
-  <input type="radio" name="answer" value="5"> 5<br>
+  <input type="radio" class="question8" value="1"> 1<br>
+  <input type="radio" class="question8" value="2"> 2<br>
+  <input type="radio" class="question8" value="3"> 3<br>
+  <input type="radio" class="question8" value="4"> 4<br>
+  <input type="radio" class="question8" value="5"> 5<br>
 
 <p>
 9. You follow politics.
 </p>
 
-  <input type="radio" name="answer" value="1"> 1<br>
-  <input type="radio" name="answer" value="2"> 2<br>
-  <input type="radio" name="answer" value="3"> 3<br>
-  <input type="radio" name="answer" value="4"> 4<br>
-  <input type="radio" name="answer" value="5"> 5<br>
+  <input type="radio" class="question9" value="1"> 1<br>
+  <input type="radio" class="question9" value="2"> 2<br>
+  <input type="radio" class="question9" value="3"> 3<br>
+  <input type="radio" class="question9" value="4"> 4<br>
+  <input type="radio" class="question9" value="5"> 5<br>
 
 <p>
 10. You read frequently.
 </p>
 
-  <input type="radio" name="answer" value="1"> 1<br>
-  <input type="radio" name="answer" value="2"> 2<br>
-  <input type="radio" name="answer" value="3"> 3<br>
-  <input type="radio" name="answer" value="4"> 4<br>
-  <input type="radio" name="answer" value="5"> 5<br>
+  <input type="radio" class="question10" value="1"> 1<br>
+  <input type="radio" class="question10" value="2"> 2<br>
+  <input type="radio" class="question10" value="3"> 3<br>
+  <input type="radio" class="question10" value="4"> 4<br>
+  <input type="radio" class="question10" value="5"> 5<br>
 
 
 <p>
-<button> Submit answers </button>
+<button id="sendAnswers"> Submit answers </button>
 </p>
 
 

@@ -1,14 +1,25 @@
-var userAnswers = [      
-		1,
-      1,
-      4,
-      1,
-      1,
-      1,
-      2,
-      1,
-      1,
-      1];
+$(document).ready(function(){
+
+console.log("PAGE LOADED <br> ________________________________________________")
+
+var userAnswers=[];
+
+
+
+$("#sendAnswers").click(function(){
+
+$('.question6:checked').each(function(){
+   userAnswers.push($(this).val());
+});
+
+console.log(userAnswers);
+
+});
+
+
+
+
+
 
 var friends =
 [
@@ -112,6 +123,9 @@ for(var i=0; i < friends.length; i++)
             }
 	}
 }
+
+});
+
 
 
 // With that done, compare the difference between current user's scores against those from other users, question by question. Add up the differences to calculate the totalDifference.
