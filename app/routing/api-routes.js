@@ -1,10 +1,16 @@
-app.get("/api/friends", function(request, response) {
+var exportsAPI = module.exports = {};
+
+
+
+
+
+exportsAPI.app.get("/api/friends", function(request, response) {
     response.send("Welcome to the friend finder page!")
 
 });
 
 
-app.get("/friends/:friendName?", function(request, response) {
+exportsAPI.app.get("/friends/:friendName?", function(request, response) {
     var chosen = request.params.friendName;
     if (chosen) {
         console.log(chosen);
