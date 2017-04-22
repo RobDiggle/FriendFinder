@@ -1,18 +1,17 @@
+var path = require('path');
 
-var exportsHTML = module.exports = {};
-
-
-
+module.exports = function(app) {
 
 
-exportsHTML.app.get("/", function(request, response){
-		response.sendFile(path.join(_dirname, "home.html"))
+app.get("/", function(request, response){
+    response.sendFile(path.join(__dirname + '/../public/survey.html'));
 
 });
 
 
-exportsHTML.app.get("/survey", function(request, response){
-		response.sendFile(path.join(_dirname, "survey.html"))
+app.get("/survey", function(request, response){
+    response.sendFile(path.join(__dirname + '/../public/home.html'));
 
 });
 
+}

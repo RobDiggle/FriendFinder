@@ -1,29 +1,66 @@
-var exportsAPI = module.exports = {};
+
+
+module.exports = function(app){
+  app.get('/api/friends', function(req,res){
+    res.json(friends);
+  });
+
+app.post('/api/friends', function(req,res){
+
+console.log("PAGE LOADED <br> ________________________________________________")
+
+
+var userAnswers=[];
 
 
 
 
 
-exportsAPI.app.get("/api/friends", function(request, response) {
-    response.send("Welcome to the friend finder page!")
-
-});
+console.log(userAnswers);
 
 
-exportsAPI.app.get("/friends/:friendName?", function(request, response) {
-    var chosen = request.params.friendName;
-    if (chosen) {
-        console.log(chosen);
 
-        for (var i = 0; i < friends.length; i++) {
-            if (chosen === friends[i].routeName) {
-                response.json(friends[i]);
-                return
+
+ var scoreArray = [];
+ var newBuddy = 0;
+
+for(var i=0; i < friends.length; i++)
+{
+	console.log(friends[i]);
+  console.log("Scores" + friends[i].scores)
+	console.log("________________________________________________")
+
+var scoreDiff = 0;
+
+	for (var j=0; j < userAnswers.length; j++ )
+	{
+    scoreDiff += (Math.abs(parseInt(friends[i].scores[j]) - parseInt(userAnswers[j])));
+
+		if(friends[i].scores !== userAnswers[j])
+            {
+            	// console.log(friends[i]);
+            	console.log(userAnswers[j]);
             }
-        }
-    } else {
-        response.json(friends);
+	}
+
+    scoreArray.push(scoreDiff);
+
+}
+
+    for(var i=0; i<scoreArray.length; i++)
+    {
+      if(scoreArray[i] <= scoreArray[newBuddy]){
+        newBuddy = i;
+      }
     }
 
-    response.send("No philosopher found.");
-})
+// 
+    var letMeTellYou = friends[newBuddy];
+    res.json(letMeTellYou);
+
+
+    //pushes new submission into the friendsList array
+    friends.push(req.body);
+  });
+
+  }

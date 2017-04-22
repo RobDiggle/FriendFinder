@@ -6,4 +6,10 @@ var body_parser= require("body-parser");
 var PORT = 4000;
 
 
-console.log("HOWDY YOU GOT ME")
+require('./app/routing/api-routes.js')(app); 
+require('./app/routing/html-routes.js')(app);
+
+app.listen(PORT, function () {
+  console.log('Listening on PORT: ' + PORT);
+});
+//ROUTES - KEY FOCUS ONROUTES
